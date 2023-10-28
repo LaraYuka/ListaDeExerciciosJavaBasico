@@ -7,7 +7,9 @@ class Main {
 
     //ex.Ex2();
 
-    ex.Ex3();
+    //ex.Ex3();
+
+    ex.Ex4();
   }
 
 }
