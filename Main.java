@@ -3,7 +3,13 @@ class Main {
     
     Exercicios ex = new Exercicios();
 
-    ex.Ex1();
+    //ex.Ex1();
+
+    //ex.Ex2();
+
+    //ex.Ex3();
+
+    ex.Ex4();
   }
 
 }
