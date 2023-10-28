@@ -28,5 +28,164 @@ public class Exercicios{
     System.out.println("A temperatura em Rankine é: " + ran);
     System.out.println("A temperatura em Fahrenheit é: " + fah);
   }
+
+  public static void Ex2(){
+    /**
+      2. Tem-se um conjunto de dados contendo a altura e o sexo              (masculino, feminino) de 10 pessoas. Fazer um algoritmo que            calcule e escreva:
+    a. a maior e a menor altura do grupo;
+    b. média de altura dos homens;
+    c. o número de mulheres.
+      **/
+
+    int qtdFeminino = 0, qtdMasculino = 0;
+    float menor= Integer.MAX_VALUE;
+    float maior=Integer.MIN_VALUE;
+    float alturaTotalMasc=0;
+
+    Scanner ler = new Scanner(System.in);
+
+    for(int i = 0; i < 10; i++){
+
+      System.out.println("Digite a altura: ");
+      float altura = ler.nextFloat();
+
+      System.out.println("Digite o número do sexo: \n 1- Feminino; \n 2- Masculino");
+      int sexo = ler.nextInt();
+
+      /**
+      if(sexo == 1){
+        System.out.println("Digite a altura: ");
+        double alturaFeminino = ler.nextDouble();
+
+        System.out.println("A altura é: " + alturaFeminino);
+        System.out.println("O sexo é: Feminino");
+
+        qtdFeminino = qtdFeminino + 1;
+        
+      } else if(sexo == 2){
+
+        System.out.println("Digite a altura: ");
+        double alturaMasculino = ler.nextDouble();
+
+        System.out.println("A altura é: " + alturaMasculino);
+        System.out.println("O sexo é: Masculino");
+
+        qtdMasculino = qtdMasculino + 1;
+
+        alturaTotalMasc = alturaTotalMasc + alturaMasculino;
+      } **/
+
+      
+      if(sexo == 1){
+        
+        System.out.println("A altura é: " + altura);
+        System.out.println("O sexo é: Feminino");
+
+        qtdFeminino++;
+        
+      } else if (sexo == 2){
+        
+        System.out.println("A altura é: " + altura);
+        System.out.println("O sexo é: Masculino");
+
+        qtdMasculino++;
+
+        alturaTotalMasc += altura;
+        
+      }
+      else{
+        System.out.println("Número de sexo invalido. Digite o número 1 para feminino ou o número 2 para masculino.");
+      }
+
+      /**
+      if (alturaFeminino > maior && alturaMasculino < maior) {
+           maior = alturaFeminino;
+      } else if (alturaFeminino < maior && alturaMasculino > maior){
+        maior = alturaMasculino;
+      }
+      if (alturaFeminino > menor && alturaMasculino < menor) {
+           menor = alturaFeminino;
+      } else if (alturaFeminino < menor && alturaMasculino > menor){
+        menor = alturaMasculino;
+      } **/
+      
+      if (altura > maior) {
+           maior = altura;
+      } 
+      if (altura < menor){
+          menor = altura;
+      }
+
+      System.out.println(" ");
+
+      System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
+
+      System.out.println(" ");
+      
+    }
+
+    if(qtdMasculino > 0){
+
+      float mediaMasc = alturaTotalMasc / qtdMasculino;
+
+      System.out.println("A maior altura do grupo é de " + maior + " m");
+      System.out.println("A menor altura é de " + menor + " m");
+      System.out.println("A média de altura dos homens é " + mediaMasc + " m");
+      System.out.println("O número de mulheres é: " + qtdFeminino);
+      
+    } else{
+      
+      System.out.println("Não possui homens no grupo, ou seja, não é possivel calcular a media de altura dos homens");
+      System.out.println("A maior altura do grupo é de " + maior + " m");
+      System.out.println("A menor altura é de " + menor + " m");
+      System.out.println("O número de mulheres é: " + qtdFeminino);
+      
+    }
+    
+  }
+
+  public static void Ex3(){
+    /** 
+    3. Criar um programa que calcule a média de salários de uma empresa, pedindo ao usuário a grade de funcionários e os salários, e devolvendo a média salarial.
+    **/
+
+    Scanner ler = new Scanner(System.in);
+
+    System.out.println("Digite a quantidade de funcionarios: ");
+    int qtdFuncionarios = ler.nextInt();
+
+    double salarioTotal = 0;
+
+    System.out.println(" ");
+
+    System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
+
+    System.out.println(" ");
+
+    for(int i = 1; i <= qtdFuncionarios; i++){
+      
+      System.out.println("Digite o nome do " + i + "° funcionario: ");
+      String nomeFuncionario = ler.next();
+
+      System.out.println(" ");
+      
+      System.out.println("Digite o salrio do " + i + "° funcionario: ");
+      double salario = ler.nextDouble();
+
+      System.out.println(" ");
+
+      System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
+
+      System.out.println(" ");
+
+      salarioTotal += salario;
+      
+    }
+    
+    double mediaSalario = salarioTotal / qtdFuncionarios;
+
+    System.out.println("A media salarial é de: " + mediaSalario);
+    
+  }
   
 }
