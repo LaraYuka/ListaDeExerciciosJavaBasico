@@ -136,7 +136,6 @@ public class Exercicios{
       System.out.println("O número de mulheres é: " + qtdFeminino);
     }
     
-    
   }
   
 }
