@@ -130,10 +130,12 @@ public class Exercicios{
       System.out.println("O número de mulheres é: " + qtdFeminino);
       
     } else{
+      
       System.out.println("Não possui homens no grupo, ou seja, não é possivel calcular a media de altura dos homens");
       System.out.println("A maior altura do grupo é de " + maior + " m");
       System.out.println("A menor altura é de " + menor + " m");
       System.out.println("O número de mulheres é: " + qtdFeminino);
+      
     }
     
   }
