@@ -9,7 +9,9 @@ class Main {
 
     //ex.Ex3();
 
-    ex.Ex4();
+    //ex.Ex4();
+
+    ex.Ex5();
   }
 
 }
